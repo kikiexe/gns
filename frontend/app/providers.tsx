@@ -41,18 +41,12 @@ export function Providers({ children }: { children: ReactNode }) {
     if (!messages) {
         return (
             <div className={`fixed inset-0 z-50 flex items-center justify-center ${isDark ? 'bg-[#0a0a0a]' : 'bg-white'}`}>
-                {/* Gradient Background */}
-                <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                    <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 ${isDark ? 'bg-emerald-500/20' : 'bg-emerald-500/30'} rounded-full blur-3xl animate-pulse`} />
-                    <div className={`absolute top-1/3 left-1/3 w-64 h-64 ${isDark ? 'bg-teal-500/15' : 'bg-teal-500/25'} rounded-full blur-3xl animate-pulse`} style={{ animationDelay: '0.5s' }} />
-                    <div className={`absolute bottom-1/3 right-1/3 w-72 h-72 ${isDark ? 'bg-cyan-500/15' : 'bg-cyan-500/25'} rounded-full blur-3xl animate-pulse`} style={{ animationDelay: '1s' }} />
-                </div>
 
                 {/* Loading Content */}
                 <div className="relative flex flex-col items-center gap-6">
                     {/* Animated Logo */}
                     <div className="relative">
-                        <div className="absolute inset-0 animate-ping opacity-20">
+                        <div className="absolute inset-0 animate-ping opacity-10">
                             <img src="/gns.png" alt="GNS" className="h-16 w-16 rounded dark:invert" />
                         </div>
                         <img src="/gns.png" alt="GNS" className="h-16 w-16 rounded animate-pulse dark:invert" />
@@ -66,7 +60,7 @@ export function Providers({ children }: { children: ReactNode }) {
 
                     {/* Loading Bar */}
                     <div className={`w-48 h-1 ${isDark ? 'bg-gray-800' : 'bg-gray-200'} rounded-full overflow-hidden`}>
-                        <div className="h-full bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full animate-loading-bar" />
+                        <div className={`h-full ${isDark ? 'bg-white' : 'bg-gray-900'} rounded-full animate-loading-bar`} />
                     </div>
                 </div>
 
