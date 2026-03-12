@@ -1,0 +1,268 @@
+{
+  "common": {
+    "appName": "Quantro",
+    "welcome": "Selamat Datang",
+    "loading": "Memuat...",
+    "save": "Simpan",
+    "cancel": "Batal",
+    "delete": "Hapus",
+    "edit": "Ubah",
+    "close": "Tutup",
+    "back": "Kembali",
+    "next": "Selanjutnya",
+    "submit": "Kirim",
+    "search": "Cari",
+    "filter": "Filter",
+    "reset": "Reset",
+    "apply": "Terapkan",
+    "confirm": "Konfirmasi",
+    "yes": "Ya",
+    "no": "Tidak",
+    "optional": "Opsional",
+    "required": "Wajib"
+  },
+  "nav": {
+    "home": "Beranda",
+    "market": "Pasar",
+    "calculators": "Kalkulator",
+    "brokerFlow": "Aliran Broker",
+    "settings": "Pengaturan",
+    "login": "Masuk",
+    "logout": "Keluar",
+    "register": "Daftar",
+    "profile": "Profil",
+    "preferences": "Preferensi",
+    "admin": "Admin"
+  },
+  "landing": {
+    "hero": {
+      "badge": "v2.0 Sudah Live",
+      "title": "Kuasai {market} dengan Quantro",
+      "market": "Pasar",
+      "subtitle": "Analitik Saham Canggih, Bandarmology, dan Screener Real-time yang dirancang untuk trader modern. Berhenti menebak, mulai menghitung.",
+      "ctaPrimary": "Mulai Uji Coba Gratis",
+      "ctaSecondary": "Tonton Demo",
+      "statsTraders": "Trader Aktif",
+      "statsDataPoints": "Titik Data",
+      "statsUptime": "Uptime",
+      "profitPnL": "Profit PnL"
+    },
+    "features": {
+      "title": "Fitur Powerful untuk {smartTraders}",
+      "smartTraders": "Trader Cerdas",
+      "subtitle": "Semua yang Anda butuhkan untuk menganalisis pasar dalam satu pusat komando terpusat.",
+      "bandarmology": {
+        "title": "Detektor Bandarmology",
+        "description": "Lacak aliran uang pintar dan akumulasi pemain besar dengan algoritma eksklusif kami. Dapatkan alert real-time saat institusi bergerak.",
+        "learnMore": "Pelajari lebih lanjut"
+      },
+      "screener": {
+        "title": "Screener Real-time",
+        "description": "Filter ribuan saham secara instan berdasarkan kriteria khusus dan indikator teknikal."
+      },
+      "charts": {
+        "title": "Chart Teknikal",
+        "description": "Alat charting canggih dengan indikator profesional."
+      },
+      "risk": {
+        "title": "Manajemen Risiko",
+        "description": "Hitung ukuran posisi dan kelola risiko portofolio."
+      },
+      "ai": {
+        "title": "Wawasan Pasar AI",
+        "description": "Biarkan AI kami menganalisis sentimen pasar, berita, dan memprediksi pergerakan pasar potensial."
+      }
+    },
+    "cta": {
+      "badge": "Bergabung dengan Komunitas",
+      "title": "Bergabunglah dengan 10,000+ Trader Cerdas Hari Ini",
+      "subtitle": "Dapatkan update pasar, tips, dan akses eksklusif ke fitur baru. Mulai perjalanan Anda menuju keputusan trading yang lebih cerdas.",
+      "buttonPrimary": "Mulai Gratis",
+      "buttonSecondary": "Jelajahi Pasar"
+    },
+    "footer": {
+      "copyright": "Quantro © 2024",
+      "privacy": "Privasi",
+      "terms": "Syarat",
+      "contact": "Kontak"
+    }
+  },
+  "settings": {
+    "title": "Pengaturan",
+    "profile": {
+      "title": "Pengaturan Profil",
+      "personalInfo": "Informasi Pribadi",
+      "name": "Nama",
+      "email": "Email",
+      "phone": "Telepon",
+      "bio": "Bio",
+      "avatar": "Avatar",
+      "updateProfile": "Perbarui Profil",
+      "changePassword": "Ubah Kata Sandi",
+      "currentPassword": "Kata Sandi Saat Ini",
+      "newPassword": "Kata Sandi Baru",
+      "confirmPassword": "Konfirmasi Kata Sandi"
+    },
+    "preferences": {
+      "title": "Preferensi",
+      "language": {
+        "title": "Bahasa",
+        "description": "Pilih bahasa pilihan Anda",
+        "english": "English (Inggris)",
+        "indonesian": "Bahasa Indonesia"
+      },
+      "theme": {
+        "title": "Tema",
+        "description": "Pilih tema antarmuka",
+        "light": "Terang",
+        "dark": "Gelap",
+        "system": "Sistem"
+      },
+      "dateFormat": {
+        "title": "Format Tanggal",
+        "description": "Pilih cara tanggal ditampilkan"
+      },
+      "timezone": {
+        "title": "Zona Waktu",
+        "description": "Atur zona waktu lokal Anda"
+      },
+      "saveChanges": "Simpan Perubahan",
+      "changesSaved": "Preferensi Anda berhasil disimpan"
+    }
+  },
+  "calculators": {
+    "title": "Kalkulator Saham",
+    "averageDown": {
+      "title": "Kalkulator Average Down",
+      "description": "Hitung harga rata-rata saat membeli lebih banyak saham"
+    },
+    "averageUp": {
+      "title": "Kalkulator Average Up",
+      "description": "Hitung harga rata-rata saat menambah posisi yang menguntungkan"
+    },
+    "breakeven": {
+      "title": "Kalkulator Balik Modal",
+      "description": "Hitung harga balik modal setelah rugi"
+    },
+    "dividend": {
+      "title": "Kalkulator Dividen",
+      "description": "Hitung pendapatan dividen dan yield"
+    },
+    "lotFee": {
+      "title": "Kalkulator Lot & Biaya",
+      "description": "Hitung biaya trading dan cost"
+    },
+    "movingAverage": {
+      "title": "Kalkulator Moving Average",
+      "description": "Hitung moving average untuk analisis teknikal"
+    },
+    "positionSizing": {
+      "title": "Kalkulator Ukuran Posisi",
+      "description": "Hitung ukuran posisi optimal berdasarkan risiko"
+    },
+    "profitLoss": {
+      "title": "Kalkulator Untung/Rugi",
+      "description": "Hitung profit atau loss trading Anda"
+    },
+    "rightsIssue": {
+      "title": "Kalkulator Rights Issue",
+      "description": "Hitung dampak rights issue pada kepemilikan Anda"
+    },
+    "riskReward": {
+      "title": "Kalkulator Risk/Reward",
+      "description": "Hitung rasio risk to reward"
+    },
+    "stockSplit": {
+      "title": "Kalkulator Stock Split",
+      "description": "Hitung dampak stock split"
+    },
+    "stopLoss": {
+      "title": "Kalkulator Stop Loss",
+      "description": "Hitung level stop loss optimal"
+    },
+    "targetPrice": {
+      "title": "Kalkulator Target Harga",
+      "description": "Hitung target harga potensial"
+    },
+    "common": {
+      "calculate": "Hitung",
+      "reset": "Reset",
+      "result": "Hasil",
+      "input": "Input",
+      "output": "Output",
+      "price": "Harga",
+      "shares": "Saham",
+      "lots": "Lot",
+      "amount": "Jumlah",
+      "percentage": "Persentase",
+      "fee": "Biaya",
+      "total": "Total"
+    }
+  },
+  "market": {
+    "title": "Analisis Pasar",
+    "overview": "Ringkasan Pasar",
+    "heatmap": "Heatmap Pasar",
+    "screener": "Stock Screener",
+    "hotlist": "Hot List",
+    "chart": "Chart",
+    "loading": "Memuat data pasar..."
+  },
+  "auth": {
+    "login": {
+      "title": "Masuk ke Akun Anda",
+      "email": "Email",
+      "password": "Kata Sandi",
+      "rememberMe": "Ingat saya",
+      "forgotPassword": "Lupa kata sandi?",
+      "submit": "Masuk",
+      "orContinueWith": "Atau lanjutkan dengan",
+      "google": "Lanjutkan dengan Google",
+      "noAccount": "Belum punya akun?",
+      "signUp": "Daftar"
+    },
+    "register": {
+      "title": "Buat Akun Anda",
+      "name": "Nama Lengkap",
+      "email": "Email",
+      "password": "Kata Sandi",
+      "confirmPassword": "Konfirmasi Kata Sandi",
+      "agreeToTerms": "Saya setuju dengan Syarat dan Ketentuan",
+      "submit": "Buat Akun",
+      "orContinueWith": "Atau lanjutkan dengan",
+      "google": "Lanjutkan dengan Google",
+      "haveAccount": "Sudah punya akun?",
+      "signIn": "Masuk"
+    },
+    "validation": {
+      "emailRequired": "Email wajib diisi",
+      "emailInvalid": "Alamat email tidak valid",
+      "passwordRequired": "Kata sandi wajib diisi",
+      "passwordMinLength": "Kata sandi minimal 8 karakter",
+      "passwordsNotMatch": "Kata sandi tidak cocok",
+      "nameRequired": "Nama wajib diisi",
+      "termsRequired": "Anda harus menyetujui syarat"
+    }
+  },
+  "admin": {
+    "title": "Panel Admin",
+    "users": "Pengguna",
+    "roles": "Peran",
+    "permissions": "Izin",
+    "settings": "Pengaturan"
+  },
+  "errors": {
+    "generic": "Terjadi kesalahan",
+    "networkError": "Kesalahan jaringan. Silakan periksa koneksi Anda.",
+    "unauthorized": "Akses tidak diizinkan",
+    "notFound": "Halaman tidak ditemukan",
+    "serverError": "Kesalahan server. Silakan coba lagi nanti."
+  },
+  "messages": {
+    "success": "Berhasil!",
+    "saved": "Perubahan berhasil disimpan",
+    "deleted": "Berhasil dihapus",
+    "updated": "Berhasil diperbarui",
+    "created": "Berhasil dibuat"
+  }
+}

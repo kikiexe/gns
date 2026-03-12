@@ -1,0 +1,268 @@
+{
+  "common": {
+    "appName": "Quantro",
+    "welcome": "Welcome",
+    "loading": "Loading...",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "submit": "Submit",
+    "search": "Search",
+    "filter": "Filter",
+    "reset": "Reset",
+    "apply": "Apply",
+    "confirm": "Confirm",
+    "yes": "Yes",
+    "no": "No",
+    "optional": "Optional",
+    "required": "Required"
+  },
+  "nav": {
+    "home": "Home",
+    "market": "Market",
+    "calculators": "Calculators",
+    "brokerFlow": "Broker Flow",
+    "settings": "Settings",
+    "login": "Login",
+    "logout": "Logout",
+    "register": "Register",
+    "profile": "Profile",
+    "preferences": "Preferences",
+    "admin": "Admin"
+  },
+  "landing": {
+    "hero": {
+      "badge": "v2.0 Live Now",
+      "title": "Master the {market} with Quantro",
+      "market": "Market",
+      "subtitle": "Advanced Stock Analytics, Bandarmology, and Real-time Screeners designed for the modern trader. Stop guessing, start calculating.",
+      "ctaPrimary": "Start Free Trial",
+      "ctaSecondary": "Watch Demo",
+      "statsTraders": "Active Traders",
+      "statsDataPoints": "Data Points",
+      "statsUptime": "Uptime",
+      "profitPnL": "Profit PnL"
+    },
+    "features": {
+      "title": "Powerful Features for {smartTraders}",
+      "smartTraders": "Smart Traders",
+      "subtitle": "Everything you need to analyze the market in one centralized command center.",
+      "bandarmology": {
+        "title": "Bandarmology Detector",
+        "description": "Track smart money flow and big player accumulation with our proprietary algorithm. Get real-time alerts when institutions make their moves.",
+        "learnMore": "Learn more"
+      },
+      "screener": {
+        "title": "Real-time Screener",
+        "description": "Filter thousands of stocks instantly based on custom criteria and technical indicators."
+      },
+      "charts": {
+        "title": "Technical Charts",
+        "description": "Advanced charting tools with professional indicators."
+      },
+      "risk": {
+        "title": "Risk Management",
+        "description": "Calculate position sizing and manage portfolio risk."
+      },
+      "ai": {
+        "title": "AI Market Insights",
+        "description": "Let our AI analyze market sentiment, news, and predict potential market movements."
+      }
+    },
+    "cta": {
+      "badge": "Join The Community",
+      "title": "Join 10,000+ Smart Traders Today",
+      "subtitle": "Get market updates, tips, and exclusive access to new features. Start your journey to smarter trading decisions.",
+      "buttonPrimary": "Get Started Free",
+      "buttonSecondary": "Explore Market"
+    },
+    "footer": {
+      "copyright": "Quantro © 2024",
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "contact": "Contact"
+    }
+  },
+  "settings": {
+    "title": "Settings",
+    "profile": {
+      "title": "Profile Settings",
+      "personalInfo": "Personal Information",
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "bio": "Bio",
+      "avatar": "Avatar",
+      "updateProfile": "Update Profile",
+      "changePassword": "Change Password",
+      "currentPassword": "Current Password",
+      "newPassword": "New Password",
+      "confirmPassword": "Confirm Password"
+    },
+    "preferences": {
+      "title": "Preferences",
+      "language": {
+        "title": "Language",
+        "description": "Select your preferred language",
+        "english": "English",
+        "indonesian": "Indonesian (Bahasa Indonesia)"
+      },
+      "theme": {
+        "title": "Theme",
+        "description": "Choose your interface theme",
+        "light": "Light",
+        "dark": "Dark",
+        "system": "System"
+      },
+      "dateFormat": {
+        "title": "Date Format",
+        "description": "Choose how dates are displayed"
+      },
+      "timezone": {
+        "title": "Timezone",
+        "description": "Set your local timezone"
+      },
+      "saveChanges": "Save Changes",
+      "changesSaved": "Your preferences have been saved successfully"
+    }
+  },
+  "calculators": {
+    "title": "Stock Calculators",
+    "averageDown": {
+      "title": "Average Down Calculator",
+      "description": "Calculate average price when buying more shares"
+    },
+    "averageUp": {
+      "title": "Average Up Calculator", 
+      "description": "Calculate average price when adding to winning positions"
+    },
+    "breakeven": {
+      "title": "Breakeven Calculator",
+      "description": "Calculate breakeven price after losses"
+    },
+    "dividend": {
+      "title": "Dividend Calculator",
+      "description": "Calculate dividend income and yield"
+    },
+    "lotFee": {
+      "title": "Lot & Fee Calculator",
+      "description": "Calculate trading fees and costs"
+    },
+    "movingAverage": {
+      "title": "Moving Average Calculator",
+      "description": "Calculate moving averages for technical analysis"
+    },
+    "positionSizing": {
+      "title": "Position Sizing Calculator",
+      "description": "Calculate optimal position size based on risk"
+    },
+    "profitLoss": {
+      "title": "Profit/Loss Calculator",
+      "description": "Calculate your trading profit or loss"
+    },
+    "rightsIssue": {
+      "title": "Rights Issue Calculator",
+      "description": "Calculate rights issue impact on your holdings"
+    },
+    "riskReward": {
+      "title": "Risk/Reward Calculator",
+      "description": "Calculate risk to reward ratio"
+    },
+    "stockSplit": {
+      "title": "Stock Split Calculator",
+      "description": "Calculate stock split impact"
+    },
+    "stopLoss": {
+      "title": "Stop Loss Calculator",
+      "description": "Calculate optimal stop loss levels"
+    },
+    "targetPrice": {
+      "title": "Target Price Calculator",
+      "description": "Calculate potential target prices"
+    },
+    "common": {
+      "calculate": "Calculate",
+      "reset": "Reset",
+      "result": "Result",
+      "input": "Input",
+      "output": "Output",
+      "price": "Price",
+      "shares": "Shares",
+      "lots": "Lots",
+      "amount": "Amount",
+      "percentage": "Percentage",
+      "fee": "Fee",
+      "total": "Total"
+    }
+  },
+  "market": {
+    "title": "Market Analysis",
+    "overview": "Market Overview",
+    "heatmap": "Market Heatmap",
+    "screener": "Stock Screener",
+    "hotlist": "Hot List",
+    "chart": "Chart",
+    "loading": "Loading market data..."
+  },
+  "auth": {
+    "login": {
+      "title": "Login to Your Account",
+      "email": "Email",
+      "password": "Password",
+      "rememberMe": "Remember me",
+      "forgotPassword": "Forgot password?",
+      "submit": "Login",
+      "orContinueWith": "Or continue with",
+      "google": "Continue with Google",
+      "noAccount": "Don't have an account?",
+      "signUp": "Sign up"
+    },
+    "register": {
+      "title": "Create Your Account",
+      "name": "Full Name",
+      "email": "Email",
+      "password": "Password",
+      "confirmPassword": "Confirm Password",
+      "agreeToTerms": "I agree to the Terms and Conditions",
+      "submit": "Create Account",
+      "orContinueWith": "Or continue with",
+      "google": "Continue with Google",
+      "haveAccount": "Already have an account?",
+      "signIn": "Sign in"
+    },
+    "validation": {
+      "emailRequired": "Email is required",
+      "emailInvalid": "Invalid email address",
+      "passwordRequired": "Password is required",
+      "passwordMinLength": "Password must be at least 8 characters",
+      "passwordsNotMatch": "Passwords do not match",
+      "nameRequired": "Name is required",
+      "termsRequired": "You must agree to the terms"
+    }
+  },
+  "admin": {
+    "title": "Admin Panel",
+    "users": "Users",
+    "roles": "Roles",
+    "permissions": "Permissions",
+    "settings": "Settings"
+  },
+  "errors": {
+    "generic": "An error occurred",
+    "networkError": "Network error. Please check your connection.",
+    "unauthorized": "Unauthorized access",
+    "notFound": "Page not found",
+    "serverError": "Server error. Please try again later."
+  },
+  "messages": {
+    "success": "Success!",
+    "saved": "Changes saved successfully",
+    "deleted": "Deleted successfully",
+    "updated": "Updated successfully",
+    "created": "Created successfully"
+  }
+}
