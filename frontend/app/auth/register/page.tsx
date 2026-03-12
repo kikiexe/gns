@@ -84,12 +84,12 @@ export default function RegisterPage() {
     );
 
     return (
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 p-4">
+        <div className="min-h-screen flex items-center justify-center p-4">
             <Card className="w-full max-w-md shadow-xl">
                 <CardHeader className="space-y-1">
                     <CardTitle className="text-3xl font-bold text-center">Create Account</CardTitle>
                     <CardDescription className="text-center">
-                        Sign up to get started with Quantro
+                        Sign up to get started with GNS
                     </CardDescription>
                 </CardHeader>
                 <CardContent>

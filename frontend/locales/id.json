@@ -1,6 +1,6 @@
 {
   "common": {
-    "appName": "Quantro",
+    "appName": "GNS",
     "welcome": "Selamat Datang",
     "loading": "Memuat...",
     "save": "Simpan",
@@ -23,9 +23,6 @@
   },
   "nav": {
     "home": "Beranda",
-    "market": "Pasar",
-    "calculators": "Kalkulator",
-    "brokerFlow": "Aliran Broker",
     "settings": "Pengaturan",
     "login": "Masuk",
     "logout": "Keluar",
@@ -35,53 +32,42 @@
     "admin": "Admin"
   },
   "landing": {
+    "badge": "Proyek Open Source",
     "hero": {
-      "badge": "v2.0 Sudah Live",
-      "title": "Kuasai {market} dengan Quantro",
-      "market": "Pasar",
-      "subtitle": "Analitik Saham Canggih, Bandarmology, dan Screener Real-time yang dirancang untuk trader modern. Berhenti menebak, mulai menghitung.",
-      "ctaPrimary": "Mulai Uji Coba Gratis",
-      "ctaSecondary": "Tonton Demo",
-      "statsTraders": "Trader Aktif",
-      "statsDataPoints": "Titik Data",
-      "statsUptime": "Uptime",
-      "profitPnL": "Profit PnL"
+      "title1": "Bangun lebih cepat dengan",
+      "title2": "dan",
+      "description": "Starter kit siap produksi dengan autentikasi, manajemen peran, i18n, dan arsitektur bersih — agar Anda fokus membangun yang penting."
+    },
+    "nav": {
+      "features": "Fitur",
+      "stack": "Teknologi",
+      "architecture": "Arsitektur",
+      "signIn": "Masuk",
+      "getStarted": "Mulai Sekarang"
+    },
+    "stack": {
+      "label": "Teknologi",
+      "title": "Ditenagai oleh alat modern",
+      "description": "Setiap teknologi dipilih untuk performa, pengalaman pengembang, dan kesiapan produksi."
     },
     "features": {
-      "title": "Fitur Powerful untuk {smartTraders}",
-      "smartTraders": "Trader Cerdas",
-      "subtitle": "Semua yang Anda butuhkan untuk menganalisis pasar dalam satu pusat komando terpusat.",
-      "bandarmology": {
-        "title": "Detektor Bandarmology",
-        "description": "Lacak aliran uang pintar dan akumulasi pemain besar dengan algoritma eksklusif kami. Dapatkan alert real-time saat institusi bergerak.",
-        "learnMore": "Pelajari lebih lanjut"
-      },
-      "screener": {
-        "title": "Screener Real-time",
-        "description": "Filter ribuan saham secara instan berdasarkan kriteria khusus dan indikator teknikal."
-      },
-      "charts": {
-        "title": "Chart Teknikal",
-        "description": "Alat charting canggih dengan indikator profesional."
-      },
-      "risk": {
-        "title": "Manajemen Risiko",
-        "description": "Hitung ukuran posisi dan kelola risiko portofolio."
-      },
-      "ai": {
-        "title": "Wawasan Pasar AI",
-        "description": "Biarkan AI kami menganalisis sentimen pasar, berita, dan memprediksi pergerakan pasar potensial."
-      }
+      "label": "Fitur",
+      "title": "Semua yang Anda butuhkan, sudah terkonfigurasi",
+      "description": "Berhenti mengatur boilerplate. Mulai bangun produk Anda dengan fitur lengkap."
+    },
+    "architecture": {
+      "label": "Arsitektur",
+      "title": "Arsitektur bersih, depan sampai belakang",
+      "description": "Struktur folder konsisten di kedua sisi untuk kode yang mudah dipelihara dan skalabel."
     },
     "cta": {
-      "badge": "Bergabung dengan Komunitas",
-      "title": "Bergabunglah dengan 10,000+ Trader Cerdas Hari Ini",
-      "subtitle": "Dapatkan update pasar, tips, dan akses eksklusif ke fitur baru. Mulai perjalanan Anda menuju keputusan trading yang lebih cerdas.",
-      "buttonPrimary": "Mulai Gratis",
-      "buttonSecondary": "Jelajahi Pasar"
+      "title": "Siap mulai membangun?",
+      "description": "Clone repo, siapkan environment, dan mulai kirim fitur dalam hitungan menit — bukan hari.",
+      "button": "Mulai Gratis",
+      "github": "Star di GitHub"
     },
     "footer": {
-      "copyright": "Quantro © 2024",
+      "copyright": "GNS © 2024",
       "privacy": "Privasi",
       "terms": "Syarat",
       "contact": "Kontak"
@@ -129,84 +115,6 @@
       "saveChanges": "Simpan Perubahan",
       "changesSaved": "Preferensi Anda berhasil disimpan"
     }
-  },
-  "calculators": {
-    "title": "Kalkulator Saham",
-    "averageDown": {
-      "title": "Kalkulator Average Down",
-      "description": "Hitung harga rata-rata saat membeli lebih banyak saham"
-    },
-    "averageUp": {
-      "title": "Kalkulator Average Up",
-      "description": "Hitung harga rata-rata saat menambah posisi yang menguntungkan"
-    },
-    "breakeven": {
-      "title": "Kalkulator Balik Modal",
-      "description": "Hitung harga balik modal setelah rugi"
-    },
-    "dividend": {
-      "title": "Kalkulator Dividen",
-      "description": "Hitung pendapatan dividen dan yield"
-    },
-    "lotFee": {
-      "title": "Kalkulator Lot & Biaya",
-      "description": "Hitung biaya trading dan cost"
-    },
-    "movingAverage": {
-      "title": "Kalkulator Moving Average",
-      "description": "Hitung moving average untuk analisis teknikal"
-    },
-    "positionSizing": {
-      "title": "Kalkulator Ukuran Posisi",
-      "description": "Hitung ukuran posisi optimal berdasarkan risiko"
-    },
-    "profitLoss": {
-      "title": "Kalkulator Untung/Rugi",
-      "description": "Hitung profit atau loss trading Anda"
-    },
-    "rightsIssue": {
-      "title": "Kalkulator Rights Issue",
-      "description": "Hitung dampak rights issue pada kepemilikan Anda"
-    },
-    "riskReward": {
-      "title": "Kalkulator Risk/Reward",
-      "description": "Hitung rasio risk to reward"
-    },
-    "stockSplit": {
-      "title": "Kalkulator Stock Split",
-      "description": "Hitung dampak stock split"
-    },
-    "stopLoss": {
-      "title": "Kalkulator Stop Loss",
-      "description": "Hitung level stop loss optimal"
-    },
-    "targetPrice": {
-      "title": "Kalkulator Target Harga",
-      "description": "Hitung target harga potensial"
-    },
-    "common": {
-      "calculate": "Hitung",
-      "reset": "Reset",
-      "result": "Hasil",
-      "input": "Input",
-      "output": "Output",
-      "price": "Harga",
-      "shares": "Saham",
-      "lots": "Lot",
-      "amount": "Jumlah",
-      "percentage": "Persentase",
-      "fee": "Biaya",
-      "total": "Total"
-    }
-  },
-  "market": {
-    "title": "Analisis Pasar",
-    "overview": "Ringkasan Pasar",
-    "heatmap": "Heatmap Pasar",
-    "screener": "Stock Screener",
-    "hotlist": "Hot List",
-    "chart": "Chart",
-    "loading": "Memuat data pasar..."
   },
   "auth": {
     "login": {

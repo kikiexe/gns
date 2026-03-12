@@ -3,7 +3,7 @@ version: "3.9"
 services:
   postgres:
     image: postgres:16-alpine
-    container_name: quantro-postgres
+    container_name: gns-postgres
     environment:
       POSTGRES_USER: ${DB_USER}
       POSTGRES_PASSWORD: ${DB_PASSWORD}
@@ -21,7 +21,7 @@ services:
 
   redis:
     image: redis:7-alpine
-    container_name: quantro-redis
+    container_name: gns-redis
     volumes:
       - redis-data:/data
     networks:
@@ -37,17 +37,17 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: quantro
+    container_name: gns
     restart: unless-stopped
     expose:
       - "8083"
     networks:
       - proxy-tier
     environment:
-      - VIRTUAL_HOST=api.quantro.id
+      - VIRTUAL_HOST=api.gns.id
       - VIRTUAL_PORT=8083
-      - LETSENCRYPT_HOST=api.quantro.id
-      - LETSENCRYPT_EMAIL=system@quantro.id
+      - LETSENCRYPT_HOST=api.gns.id
+      - LETSENCRYPT_EMAIL=system@gns.id
     depends_on:
       postgres:
         condition: service_healthy

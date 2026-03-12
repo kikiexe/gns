@@ -68,7 +68,7 @@ export function Providers({ children }: { children: ReactNode }) {
 
                     {/* Brand Name */}
                     <div className="flex flex-col items-center gap-2">
-                        <span className={`text-2xl font-bold tracking-tight ${isDark ? 'text-white' : 'text-gray-900'}`}>Quantro</span>
+                        <span className={`text-2xl font-bold tracking-tight ${isDark ? 'text-white' : 'text-gray-900'}`}>GNS</span>
                         <span className={`text-sm ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>Loading your experience...</span>
                     </div>
 

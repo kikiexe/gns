@@ -79,20 +79,15 @@ export function PreferenceSettingsPage() {
                     <Card>
                         <CardHeader>
                             <div className="flex items-center gap-3">
-                                <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center">
-                                    <Globe className="h-5 w-5 text-white" />
-                                </div>
-                                <div>
-                                    <CardTitle>{t('language.title')}</CardTitle>
-                                    <CardDescription>{t('language.description')}</CardDescription>
-                                </div>
+                                <CardTitle>{t('language.title')}</CardTitle>
+                                <CardDescription>{t('language.description')}</CardDescription>
                             </div>
                         </CardHeader>
                         <CardContent>
                             <RadioGroup value={selectedLocale} onValueChange={(value) => setSelectedLocale(value as 'en' | 'id')}>
                                 <div className="flex flex-col gap-3">
                                     <div className={`flex items-center space-x-3 rounded-lg border-2 p-4 cursor-pointer transition-all ${selectedLocale === 'en'
-                                        ? 'border-emerald-500 bg-emerald-500/5'
+                                        ? 'border-primary bg-primary/5'
                                         : 'border-border hover:border-foreground/20 hover:bg-muted/50'
                                         }`} onClick={() => setSelectedLocale('en')}>
                                         <RadioGroupItem value="en" id="en" />
@@ -105,7 +100,7 @@ export function PreferenceSettingsPage() {
                                     </div>
 
                                     <div className={`flex items-center space-x-3 rounded-lg border-2 p-4 cursor-pointer transition-all ${selectedLocale === 'id'
-                                        ? 'border-emerald-500 bg-emerald-500/5'
+                                        ? 'border-primary bg-primary/5'
                                         : 'border-border hover:border-foreground/20 hover:bg-muted/50'
                                         }`} onClick={() => setSelectedLocale('id')}>
                                         <RadioGroupItem value="id" id="id" />
@@ -125,24 +120,15 @@ export function PreferenceSettingsPage() {
                     <Card>
                         <CardHeader>
                             <div className="flex items-center gap-3">
-                                <div className="h-10 w-10 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
-                                    {selectedTheme === 'dark' ? (
-                                        <Moon className="h-5 w-5 text-white" />
-                                    ) : (
-                                        <Sun className="h-5 w-5 text-white" />
-                                    )}
-                                </div>
-                                <div>
-                                    <CardTitle>{t('theme.title')}</CardTitle>
-                                    <CardDescription>{t('theme.description')}</CardDescription>
-                                </div>
+                                <CardTitle>{t('theme.title')}</CardTitle>
+                                <CardDescription>{t('theme.description')}</CardDescription>
                             </div>
                         </CardHeader>
                         <CardContent>
                             <RadioGroup value={selectedTheme} onValueChange={setSelectedTheme}>
                                 <div className="flex flex-col gap-3">
                                     <div className={`flex items-center space-x-3 rounded-lg border-2 p-4 cursor-pointer transition-all ${selectedTheme === 'light'
-                                        ? 'border-emerald-500 bg-emerald-500/5'
+                                        ? 'border-primary bg-primary/5'
                                         : 'border-border hover:border-foreground/20 hover:bg-muted/50'
                                         }`} onClick={() => setSelectedTheme('light')}>
                                         <RadioGroupItem value="light" id="light" />
@@ -156,7 +142,7 @@ export function PreferenceSettingsPage() {
                                     </div>
 
                                     <div className={`flex items-center space-x-3 rounded-lg border-2 p-4 cursor-pointer transition-all ${selectedTheme === 'dark'
-                                        ? 'border-emerald-500 bg-emerald-500/5'
+                                        ? 'border-primary bg-primary/5'
                                         : 'border-border hover:border-foreground/20 hover:bg-muted/50'
                                         }`} onClick={() => setSelectedTheme('dark')}>
                                         <RadioGroupItem value="dark" id="dark" />

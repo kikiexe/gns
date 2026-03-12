@@ -3,11 +3,11 @@ version: "3.8"
 services:
   postgres:
     image: postgres:16-alpine
-    container_name: quantro-postgres-dev
+    container_name: gns-postgres-dev
     environment:
-      POSTGRES_USER: ${DB_USER:-quantro}
-      POSTGRES_PASSWORD: ${DB_PASSWORD:-quantro123}
-      POSTGRES_DB: ${DB_NAME:-quantro_db}
+      POSTGRES_USER: ${DB_USER:-gns}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-gns123}
+      POSTGRES_DB: ${DB_NAME:-gns_db}
     ports:
       - "${DB_PORT:-5432}:5432"
     volumes:
@@ -16,14 +16,14 @@ services:
       - app-network
     restart: unless-stopped
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-quantro}"]
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER:-gns}"]
       interval: 10s
       timeout: 5s
       retries: 5
 
   redis:
     image: redis:7-alpine
-    container_name: quantro-redis-dev
+    container_name: gns-redis-dev
     ports:
       - "${CACHE_PORT:-6379}:6379"
     volumes:
@@ -41,7 +41,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.dev
-    container_name: quantro-dev
+    container_name: gns-dev
     ports:
       - "8080:8080"
     volumes:

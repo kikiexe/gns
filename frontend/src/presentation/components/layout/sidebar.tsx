@@ -2,9 +2,8 @@
 
 import { useState } from 'react'
 import {
-    X, LayoutDashboard, Calculator, DollarSign, TrendingUp, TrendingDown, Briefcase, User, Settings,
-    Shield, Target, Repeat, Receipt, PieChart, GitBranch, Scissors, Activity, ArrowUpCircle, LineChart, LogOut,
-    Users, ShieldCheck, Key, AlertTriangle
+    X, LayoutDashboard, User, Settings,
+    Shield, LogOut, Users, ShieldCheck, Key, AlertTriangle
 } from 'lucide-react'
 import { SidebarItem, SidebarMenuItem } from './sidebar-item'
 import { cn } from '@/src/lib/utils'
@@ -36,102 +35,6 @@ const menuItems: SidebarMenuItem[] = [
         label: 'Home',
         href: '/home',
         icon: LayoutDashboard,
-    },
-    {
-        label: 'Broker Flow',
-        href: '/broker-flow',
-        icon: Briefcase,
-    },
-    {
-        label: 'Stock Flow',
-        href: '/stock-flow',
-        icon: Activity,
-    },
-    {
-        label: 'Sentiment Indicator',
-        href: '/sentiment-indicator',
-        icon: TrendingUp,
-    },
-    {
-        label: 'Market',
-        href: '/market',
-        icon: LineChart,
-    },
-    {
-        label: 'Calculator',
-        icon: Calculator,
-        children: [
-            {
-                label: 'Profit Calculator',
-                href: '/calculator/profit',
-                icon: DollarSign,
-            },
-            {
-                label: 'Dividend Calculator',
-                href: '/calculator/dividend',
-                icon: TrendingUp,
-            },
-            {
-                label: 'ARA/ARB Calculator',
-                href: '/calculator/ara-arb',
-                icon: Activity,
-            },
-            {
-                label: 'Lot & Fee Calculator',
-                href: '/calculator/lot-fee',
-                icon: Receipt,
-            },
-            {
-                label: 'Position Sizing',
-                href: '/calculator/position-sizing',
-                icon: Shield,
-            },
-            {
-                label: 'Risk Reward',
-                href: '/calculator/risk-reward',
-                icon: Target,
-            },
-            {
-                label: 'Average Down/Up',
-                href: '/calculator/average',
-                icon: TrendingDown,
-            },
-            {
-                label: 'DCA Calculator',
-                href: '/calculator/dca',
-                icon: Repeat,
-            },
-            {
-                label: 'Portfolio Diversification',
-                href: '/calculator/portfolio',
-                icon: PieChart,
-            },
-            {
-                label: 'Breakeven Calculator',
-                href: '/calculator/breakeven',
-                icon: ArrowUpCircle,
-            },
-            {
-                label: 'Rights Issue (HMETD)',
-                href: '/calculator/rights-issue',
-                icon: GitBranch,
-            },
-            {
-                label: 'Stock Split',
-                href: '/calculator/stock-split',
-                icon: Scissors,
-            },
-            {
-                label: 'Moving Average',
-                href: '/calculator/moving-average',
-                icon: Activity,
-            },
-            {
-                label: 'Investment Growth',
-                href: '/calculator/investment-growth',
-                icon: TrendingUp,
-            },
-        ],
     },
     {
         label: 'User Management',
@@ -209,7 +112,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                         <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
                             <span className="text-xl font-bold">Q</span>
                         </div>
-                        <span className="text-xl font-bold">Quantro</span>
+                        <span className="text-xl font-bold">GNS</span>
                     </div>
 
                     {/* Close button (mobile/tablet only) */}

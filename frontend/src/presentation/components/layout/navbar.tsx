@@ -28,7 +28,7 @@ export function Navbar({ onMenuToggle }: NavbarProps) {
                     <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
                         <span className="text-xl font-bold">Q</span>
                     </div>
-                    <span className="text-xl font-bold">Quantro</span>
+                    <span className="text-xl font-bold">GNS</span>
                 </div>
 
                 {/* Spacer for desktop */}

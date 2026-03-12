@@ -30,20 +30,8 @@ INSERT INTO permissions (name, module, description) VALUES
 ('permissions.create', 'permissions', 'Create new permissions'),
 ('permissions.update', 'permissions', 'Update permission information'),
 ('permissions.delete', 'permissions', 'Delete permissions'),
-('permissions.assign', 'permissions', 'Assign permissions to roles'),
+('permissions.assign', 'permissions', 'Assign permissions to roles')
 
--- Broker permissions
-('brokers.read', 'brokers', 'View brokers'),
-('brokers.create', 'brokers', 'Create new brokers'),
-('brokers.update', 'brokers', 'Update broker information'),
-('brokers.delete', 'brokers', 'Delete brokers'),
-
--- Broker trades permissions
-('broker_trades.read', 'broker_trades', 'View broker trades'),
-('broker_trades.scrape', 'broker_trades', 'Trigger scraping'),
-
--- Dashboard permissions
-('dashboard.view', 'dashboard', 'View dashboard')
 ON CONFLICT (name) DO NOTHING;
 
 -- Assign all permissions to Super Admin
@@ -70,10 +58,7 @@ FROM roles r
 CROSS JOIN permissions p
 WHERE r.name = 'User'
 AND p.name IN (
-    'auth.login',
-    'dashboard.view',
-    'brokers.read',
-    'broker_trades.read'
+    'auth.login'
 )
 ON CONFLICT (role_id, permission_id) DO NOTHING;
 
@@ -85,10 +70,7 @@ CROSS JOIN (
     VALUES 
         ('users'),
         ('roles'),
-        ('permissions'),
-        ('brokers'),
-        ('broker_trades'),
-        ('dashboard')
+        ('permissions')
 ) AS modules(module_name)
 WHERE r.name = 'Super Admin'
 ON CONFLICT (role_id, module_name) DO NOTHING;
@@ -101,10 +83,7 @@ CROSS JOIN (
     VALUES 
         ('users', TRUE, TRUE, TRUE, FALSE),
         ('roles', TRUE, TRUE, TRUE, FALSE),
-        ('permissions', TRUE, FALSE, FALSE, FALSE),
-        ('brokers', TRUE, TRUE, TRUE, TRUE),
-        ('broker_trades', TRUE, TRUE, TRUE, TRUE),
-        ('dashboard', TRUE, FALSE, FALSE, FALSE)
+        ('permissions', TRUE, FALSE, FALSE, FALSE)
 ) AS modules(module_name, can_view, can_create, can_edit, can_delete)
 WHERE r.name = 'Admin'
 ON CONFLICT (role_id, module_name) DO NOTHING;
@@ -115,9 +94,21 @@ SELECT r.id, module_name, can_view, can_create, can_edit, can_delete
 FROM roles r
 CROSS JOIN (
     VALUES 
-        ('dashboard', TRUE, FALSE, FALSE, FALSE),
-        ('brokers', TRUE, FALSE, FALSE, FALSE),
-        ('broker_trades', TRUE, FALSE, FALSE, FALSE)
+        ('dashboard', TRUE, FALSE, FALSE, FALSE)
 ) AS modules(module_name, can_view, can_create, can_edit, can_delete)
 WHERE r.name = 'User'
 ON CONFLICT (role_id, module_name) DO NOTHING;
+
+-- Seed Super Admin user account
+INSERT INTO users (email, password_hash, name, is_active, email_verified) VALUES
+('admin@gns.com', '$2a$12$XY/mig5k4jgmhwIog70zD.PbGEQ8YdHD1wBsEiUdXfOmOORX/Cfx2', 'Super Admin', TRUE, TRUE)
+ON CONFLICT (email) DO NOTHING;
+
+-- Assign Super Admin role to the admin user
+INSERT INTO user_roles (user_id, role_id)
+SELECT u.id, r.id
+FROM users u
+CROSS JOIN roles r
+WHERE u.email = 'admin@gns.com'
+AND r.name = 'Super Admin'
+ON CONFLICT (user_id, role_id) DO NOTHING;
