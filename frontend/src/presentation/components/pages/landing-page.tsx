@@ -50,6 +50,7 @@ function LandingNavbar() {
             <div className="mx-auto max-w-6xl flex items-center justify-between px-6 h-16">
                 {/* Logo */}
                 <Link href="/" className="flex items-center gap-2.5 group">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img src="/gns.png" alt="GNS" className="h-8 w-8 rounded-lg dark:invert" />
                     <span className="text-lg font-semibold tracking-tight">GNS</span>
                 </Link>
@@ -193,7 +194,7 @@ function HeroSection() {
                         </div>
                         {/* Code Content */}
                         <div className="p-6 font-mono text-sm leading-relaxed overflow-x-auto">
-                            <div className="text-muted-foreground/60">// cmd/api/main.go</div>
+                            <div className="text-muted-foreground/60">{`// cmd/api/main.go`}</div>
                             <div className="mt-2">
                                 <span className="text-purple-400">package</span>{' '}
                                 <span className="text-foreground">main</span>
@@ -209,7 +210,7 @@ function HeroSection() {
                                 <span className="text-foreground">()</span>
                             </div>
                             <div className="mt-3 ml-6">
-                                <span className="text-muted-foreground/60">// setup server</span>
+                                <span className="text-muted-foreground/60">{`// setup server`}</span>
                             </div>
                             <div className="ml-6">
                                 <span className="text-foreground">container, _</span>
@@ -224,7 +225,7 @@ function HeroSection() {
                                 <span className="text-foreground">(Start)</span>
                             </div>
                             <div className="mt-3 ml-6">
-                                <span className="text-muted-foreground/60">// add quit signal</span>
+                                <span className="text-muted-foreground/60">{`// add quit signal`}</span>
                             </div>
                             <div className="ml-6">
                                 <span className="text-foreground">quit</span>
@@ -469,7 +470,7 @@ function ArchitectureSection() {
                                 <div key={i} className="flex items-baseline gap-3">
                                     <span className="text-emerald-400/80">{item.name}</span>
                                     {item.label && (
-                                        <span className="text-muted-foreground/50 text-xs">// {item.label}</span>
+                                        <span className="text-muted-foreground/50 text-xs">{`// `}{item.label}</span>
                                     )}
                                 </div>
                             ))}
@@ -494,7 +495,7 @@ function ArchitectureSection() {
                                 <div key={i} className="flex items-baseline gap-3">
                                     <span className="text-teal-400/80">{item.name}</span>
                                     {item.label && (
-                                        <span className="text-muted-foreground/50 text-xs">// {item.label}</span>
+                                        <span className="text-muted-foreground/50 text-xs">{`// `}{item.label}</span>
                                     )}
                                 </div>
                             ))}
@@ -570,6 +571,7 @@ function LandingFooter() {
                 <div className="flex flex-col md:flex-row items-center justify-between gap-6">
                     {/* Brand */}
                     <div className="flex items-center gap-2">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img src="/gns.png" alt="GNS" className="h-5 w-5 rounded dark:invert" />
                         <span className="text-sm text-muted-foreground">
                             GNS © {new Date().getFullYear()}

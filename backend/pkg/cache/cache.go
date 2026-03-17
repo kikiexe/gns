@@ -27,7 +27,7 @@ type cache struct {
 type errCache error
 
 var (
-	CacheNil errCache = errors.New("cache is nil")
+	ErrCacheNil errCache = errors.New("cache is nil")
 )
 
 func NewCache() Cache {
@@ -49,7 +49,7 @@ func (c *cache) Get(ctx context.Context, key string) (string, error) {
 	val, err := c.client.Get(ctx, key).Result()
 	if err != nil {
 		if errors.Is(err, redis.Nil) {
-			return "", CacheNil
+			return "", ErrCacheNil
 		}
 		return "", err
 	}

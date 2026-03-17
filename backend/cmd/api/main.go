@@ -57,9 +57,12 @@ func main() {
 
 	// add quit signal
 	quit := make(chan os.Signal, 1)
-	container.Provide(func() chan os.Signal {
+	err = container.Provide(func() chan os.Signal {
 		return quit
 	})
+	if err != nil {
+		log.Fatal(err)
+	}
 
 	signal.Notify(quit, os.Interrupt, syscall.SIGHUP, syscall.SIGINT, syscall.SIGTERM, syscall.SIGQUIT)
 

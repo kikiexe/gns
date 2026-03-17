@@ -35,7 +35,7 @@ function FileTree({ items }: { items: { name: string; desc?: string; indent?: nu
                 {items.map((item, i) => (
                     <div key={i} className="flex items-baseline gap-3" style={{ paddingLeft: `${(item.indent || 0) * 16}px` }}>
                         <span className="text-emerald-400/80">{item.name}</span>
-                        {item.desc && <span className="text-muted-foreground/50 text-xs">// {item.desc}</span>}
+                        {item.desc && <span className="text-muted-foreground/50 text-xs">{`// `}{item.desc}</span>}
                     </div>
                 ))}
             </div>

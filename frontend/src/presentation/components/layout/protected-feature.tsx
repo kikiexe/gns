@@ -1,7 +1,6 @@
 'use client';
 
 import { usePermission } from '@/src/application/hooks/use-permission';
-import { Alert, AlertDescription, AlertTitle } from '@/src/presentation/components/ui/alert';
 import { ShieldX } from 'lucide-react';
 import { MainLayout } from './main-layout';
 
@@ -103,7 +102,7 @@ export function ProtectedModule({
                             <div className="flex justify-center mb-6">
                                 <div className="relative">
                                     <div className="absolute inset-0 bg-destructive/20 rounded-full blur-xl animate-pulse" />
-                                    <div className="relative bg-gradient-to-br from-destructive to-red-600 p-4 rounded-full">
+                                    <div className="relative bg-linear-to-br from-destructive to-red-600 p-4 rounded-full">
                                         <ShieldX className="h-8 w-8 text-white" />
                                     </div>
                                 </div>
@@ -121,9 +120,9 @@ export function ProtectedModule({
 
                                 {/* Decorative divider */}
                                 <div className="flex items-center gap-4 py-2">
-                                    <div className="flex-1 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+                                    <div className="flex-1 h-px bg-linear-to-r from-transparent via-border to-transparent" />
                                     <ShieldX className="h-4 w-4 text-muted-foreground/50" />
-                                    <div className="flex-1 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+                                    <div className="flex-1 h-px bg-linear-to-r from-transparent via-border to-transparent" />
                                 </div>
 
                                 <p className="text-xs text-muted-foreground/70">

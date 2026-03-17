@@ -45,7 +45,11 @@ func VerifyGoogleIDToken(ctx context.Context, idToken string) (*GoogleUserInfo, 
 	if err != nil {
 		return nil, fmt.Errorf("%w: %v", ErrTokenVerification, err)
 	}
-	defer resp.Body.Close()
+	defer func() {
+		if err := resp.Body.Close(); err != nil {
+			fmt.Println(err)
+		}
+	}()
 
 	if resp.StatusCode != http.StatusOK {
 		return nil, ErrInvalidToken

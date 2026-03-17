@@ -28,6 +28,7 @@ var (
 	ContextUserID contextKey = contextKey("user-id")
 	ContextEmail  contextKey = contextKey("email")
 	ContextRole   contextKey = contextKey("role")
+	ContextUser   contextKey = contextKey("user")
 )
 
 func JWTAuthMiddleware(next http.Handler) http.Handler {
@@ -71,7 +72,7 @@ func JWTAuthMiddleware(next http.Handler) http.Handler {
 		// Parse dan verifikasi token
 		token, err := jwt.ParseWithClaims(tokenStr, &claims, func(token *jwt.Token) (interface{}, error) {
 			if _, ok := token.Method.(*jwt.SigningMethodHMAC); !ok {
-				return nil, fmt.Errorf("Unexpected signing method: %v", token.Header["alg"])
+				return nil, fmt.Errorf("unexpected signing method: %v", token.Header["alg"])
 			}
 
 			return []byte(cfg.Auth.JwtSecret), nil
@@ -97,7 +98,7 @@ func JWTAuthMiddleware(next http.Handler) http.Handler {
 			return
 		}
 
-		accessTokenValue, err := ch.Get(ctx, accessTokenKey)
+		accessTokenValue, _ := ch.Get(ctx, accessTokenKey)
 		if accessTokenValue != tokenStr {
 			res.Code = http.StatusUnauthorized
 			res.Message = "Invalid token"
@@ -111,7 +112,7 @@ func JWTAuthMiddleware(next http.Handler) http.Handler {
 		ctxRes.Email = claims.Email
 		ctxRes.Role = claims.Role
 
-		sharingCtx := context.WithValue(ctx, "user_context", ctxRes)
+		sharingCtx := context.WithValue(ctx, ContextUser, ctxRes)
 		next.ServeHTTP(w, r.WithContext(sharingCtx))
 	})
 }

@@ -67,6 +67,7 @@ export function ChangePasswordForm() {
             toast.success('Password changed successfully! You will be logged out.')
             resetForm()
             // Note: User will be automatically logged out by the auth store
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         } catch (error: any) {
             toast.error(error.response?.data?.message || 'Failed to change password')
             setIsSubmitting(false)

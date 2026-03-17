@@ -37,6 +37,7 @@ export function ProfileInfoForm() {
             setIsSubmitting(true)
             await updateProfile({ name: name.trim() })
             toast.success('Profile updated successfully!')
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         } catch (error: any) {
             toast.error(error.response?.data?.message || 'Failed to update profile')
         } finally {

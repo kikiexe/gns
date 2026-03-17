@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Globe, Moon, Sun, Check } from 'lucide-react'
+import { Moon, Sun, Check } from 'lucide-react'
 import { useTheme } from 'next-themes'
 import { useLocale, useTranslations } from '@/src/presentation/hooks/use-locale'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/src/presentation/components/ui/card'
@@ -24,17 +24,20 @@ export function PreferenceSettingsPage() {
     const [mounted, setMounted] = useState(false)
 
     useEffect(() => {
+        // eslint-disable-next-line react-hooks/set-state-in-effect
         setMounted(true)
     }, [])
 
     useEffect(() => {
         if (isReady) {
+            // eslint-disable-next-line react-hooks/set-state-in-effect
             setSelectedLocale(locale)
         }
     }, [locale, isReady])
 
     useEffect(() => {
         if (theme) {
+            // eslint-disable-next-line react-hooks/set-state-in-effect
             setSelectedTheme(theme)
         }
     }, [theme])

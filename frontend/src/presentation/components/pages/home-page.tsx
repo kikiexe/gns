@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import {
-    ArrowRight, LayoutDashboard, Shield, Users, ShieldCheck, Key
+    ArrowRight, Shield, Users, ShieldCheck, Key
 } from 'lucide-react'
 import { Separator } from '@/src/presentation/components/ui/separator'
 

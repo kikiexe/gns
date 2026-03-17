@@ -2,6 +2,7 @@ package response
 
 import (
 	"encoding/json"
+	"fmt"
 	"net/http"
 )
 
@@ -26,7 +27,9 @@ func ResponseJSON(w http.ResponseWriter, statusCode int, data interface{}) {
 	if data != nil {
 		if err := json.NewEncoder(w).Encode(data); err != nil {
 			w.WriteHeader(http.StatusInternalServerError)
-			w.Write([]byte("Failed to encode response"))
+			if _, err := w.Write([]byte("Failed to encode response")); err != nil {
+				fmt.Println(err)
+			}
 		}
 	}
 }

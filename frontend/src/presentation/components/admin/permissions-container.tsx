@@ -29,11 +29,7 @@ export function PermissionsContainer() {
     const [permissionModule, setPermissionModule] = useState('');
     const [permissionDescription, setPermissionDescription] = useState('');
 
-    useEffect(() => {
-        loadData();
-    }, []);
-
-    const loadData = async () => {
+    async function loadData() {
         try {
             setLoading(true);
             const data = await rbacService.getPermissionsByModule();
@@ -43,7 +39,13 @@ export function PermissionsContainer() {
             setError(err.response?.data?.message || 'Failed to load permissions');
             setLoading(false);
         }
-    };
+    }
+
+    useEffect(() => {
+        loadData();
+    }, []);
+
+
 
     const handleCreatePermission = async () => {
         try {

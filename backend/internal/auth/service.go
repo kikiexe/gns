@@ -840,7 +840,7 @@ func (s *service) ListDeletedUsers(ctx context.Context, req UserListRequest) (*U
 
 func (s *service) RestoreUserByAdmin(ctx context.Context, id uuid.UUID) (*UserResponse, int, error) {
 	// Check if deleted user exists
-	user, err := s.repo.GetDeletedUserByID(ctx, id)
+	_, err := s.repo.GetDeletedUserByID(ctx, id)
 	if err != nil {
 		if errors.Is(err, ErrUserNotFound) {
 			return nil, http.StatusNotFound, errors.New("deleted user not found")
@@ -855,7 +855,7 @@ func (s *service) RestoreUserByAdmin(ctx context.Context, id uuid.UUID) (*UserRe
 	}
 
 	// Get fresh user data
-	user, err = s.repo.GetUserByID(ctx, id)
+	user, err := s.repo.GetUserByID(ctx, id)
 	if err != nil {
 		return nil, http.StatusInternalServerError, errors.New("failed to get restored user")
 	}
