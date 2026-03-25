@@ -8,7 +8,6 @@ import (
 
 	"github.com/golang-jwt/jwt/v5"
 
-	"github.com/base-go/backend/pkg/cache"
 	"github.com/base-go/backend/pkg/config"
 	"github.com/base-go/backend/pkg/response"
 )
@@ -79,27 +78,6 @@ func JWTAuthMiddleware(next http.Handler) http.Handler {
 		})
 
 		if err != nil || !token.Valid {
-			res.Code = http.StatusUnauthorized
-			res.Message = "Invalid token"
-			response.ResponseJSON(w, res.Code, res)
-
-			return
-		}
-
-		ch := cache.NewCache()
-		accessTokenKey := fmt.Sprintf("%s_USER_ACCESS_TOKEN", claims.Email)
-
-		accessTokenExist := ch.Exists(ctx, accessTokenKey).Val()
-		if accessTokenExist < 1 {
-			res.Code = http.StatusUnauthorized
-			res.Message = "Expired token"
-			response.ResponseJSON(w, res.Code, res)
-
-			return
-		}
-
-		accessTokenValue, _ := ch.Get(ctx, accessTokenKey)
-		if accessTokenValue != tokenStr {
 			res.Code = http.StatusUnauthorized
 			res.Message = "Invalid token"
 			response.ResponseJSON(w, res.Code, res)
